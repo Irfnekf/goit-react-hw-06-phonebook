@@ -15,10 +15,9 @@ const ContactsForm = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const result = onSubmit({ name, number });
-    if (result) {
-      setState({ ...inititalState });
-    }
+    onSubmit({ name, number });
+
+    setState({ ...inititalState });
   };
 
   const { name, number } = state;
